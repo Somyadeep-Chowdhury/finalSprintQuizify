@@ -29,9 +29,8 @@ public class FeedDataApplicationListener implements ApplicationListener<ContextR
         user.setUserName("kaustav pal");
         user.setEmailId("kaustavlogan@gmail.com");
         user.setPassword("1234567890");
-        user.setInterests(null);
+        user.setGenres(null);
         user.setGender("male");
-
         producer.send(user);
 
     }
