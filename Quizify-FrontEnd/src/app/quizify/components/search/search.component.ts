@@ -11,8 +11,7 @@ import { SearchService } from '../../services/search.service';
 export class SearchComponent implements OnInit {
   Gamesearch: any;
   private games: Gamesearch[];
-  @Input() game: Gamesearch;
-
+  
   constructor(private router: Router, private searchService: SearchService) { }
 
   ngOnInit() {
