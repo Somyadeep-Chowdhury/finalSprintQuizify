@@ -4,6 +4,7 @@ import { Admin } from './admin';
 import { Topic } from './topic';
 
 export class Game {
+     id: number;
      name: string;
      category: Category;
      topic: Topic;

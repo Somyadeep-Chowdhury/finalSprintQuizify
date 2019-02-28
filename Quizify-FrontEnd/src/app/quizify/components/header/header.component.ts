@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+<<<<<<< HEAD
 
   // search(value) {
   //   this.searchService.searchByTopicStartsWith(value).subscribe((res: any) => {
@@ -21,4 +22,6 @@ export class HeaderComponent implements OnInit {
   //     console.log(this.games);
   //   });
   // }
+=======
+>>>>>>> 72823d5b578017e0998e442e9220ea1595cee47a
 }

@@ -17,6 +17,7 @@ public class User {
     private String userName;
     private String password;
     private String emailId;
-    private List<String> interests;
+    private Topic topic;
+    private List<Genre> genres;
     private String gender;
 }
