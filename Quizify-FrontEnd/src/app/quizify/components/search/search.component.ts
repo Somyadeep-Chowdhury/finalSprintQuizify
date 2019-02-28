@@ -23,6 +23,12 @@ export class SearchComponent implements OnInit {
       this.games = res.body[0].game;
       console.log(this.games);
     });
+  }
+  // search(value) {
+  //   this.searchService.searchByTopicStartsWith(value).subscribe((res: any) => {
+  //     this.games = res.body[0].game;
+  //     console.log(this.games);
+  //   });
 
 }
 }
