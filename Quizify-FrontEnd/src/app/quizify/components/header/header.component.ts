@@ -10,8 +10,15 @@ import { Gamesearch } from '../../tsclasses/gamesearch';
 export class HeaderComponent implements OnInit {
 
   private games: Gamesearch[];
-  constructor(private searchService: SearchService) { }
+  constructor() { }
 
   ngOnInit() {
   }
+
+  // search(value) {
+  //   this.searchService.searchByTopicStartsWith(value).subscribe((res: any) => {
+  //     this.games = res.body[0].game;
+  //     console.log(this.games);
+  //   });
+  // }
 }
