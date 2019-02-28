@@ -43,6 +43,7 @@ export class GameComponent implements OnInit {
     private questionNumber = '';
     private statusCode: number;
     private gameName: string;
+    private gameId: number;
     private gameGenre: string;
 
 
@@ -97,6 +98,7 @@ export class GameComponent implements OnInit {
         this.snackBar.open('Please Fill All The Fields!', '', {duration: 500});
      } else {
       this.game = new Game();
+      this.game.id = this.gameId;
       this.game.name =  this.gameName;
       this.game.topic = this.currentTopic;
       this.game.category = this.gamecategory;
