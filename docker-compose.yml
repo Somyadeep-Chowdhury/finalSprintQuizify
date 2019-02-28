@@ -206,6 +206,23 @@ services:
     expose:
       - 8104
 
+  single-player-engine:
+    image: single-player-engine
+    build: single-player-engine/
+    restart: always
+    network_mode: host
+    depends_on:
+      - zookeeper
+      - kafka
+      - neo4j
+      - eurekaserver
+      - configserver
+      - apigateway
+    ports:
+      - 8108:8108
+    expose:
+      - 8108
+
   quizify-front-end:
     image: quizify-front-end
     build: Quizify-FrontEnd/

@@ -1,6 +1,5 @@
 package com.stackroute.quizify.kafka.configuration;
 
-import com.stackroute.quizify.signleplayerengine.domain.GameUserHistory;
 import com.stackroute.quizify.signleplayerengine.domain.SinglePlayer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -21,7 +20,7 @@ public class KafkaProducerConfig {
     private String bootstrapServer;
 
     @Bean
-    public ProducerFactory<String, GameUserHistory> producerFactory() {
+    public ProducerFactory<String, SinglePlayer> producerFactory() {
         Map<String, Object> configs = new HashMap<>();
         configs.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         configs.put(JsonSerializer.ADD_TYPE_INFO_HEADERS, false);
@@ -32,7 +31,7 @@ public class KafkaProducerConfig {
     }
 
     @Bean
-    public KafkaTemplate<String, GameUserHistory> kafkaTemplate() {
+    public KafkaTemplate<String, SinglePlayer> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 }

@@ -1,7 +1,4 @@
 package com.stackroute.quizify.kafka;
-
-import com.stackroute.quizify.signleplayerengine.domain.Game;
-import com.stackroute.quizify.signleplayerengine.domain.GameUserHistory;
 import com.stackroute.quizify.signleplayerengine.domain.SinglePlayer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,24 +13,24 @@ public class Producer {
     @Value("${kafka.topic}")
     private String topic;
 
-    private GameUserHistory payload;
+    private SinglePlayer payload;
 
     private Logger logger = LoggerFactory.getLogger(Producer.class);
 
 
-    private KafkaTemplate<String, GameUserHistory> kafkaTemplate;
+    private KafkaTemplate<String, SinglePlayer> kafkaTemplate;
 
-    public GameUserHistory getPayload()
+    public SinglePlayer getPayload()
     {
         return this.payload;
     }
 
     @Autowired
-    public Producer(KafkaTemplate<String, GameUserHistory> kafkaTemplate) {
+    public Producer(KafkaTemplate<String, SinglePlayer> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public GameUserHistory send(GameUserHistory payload) {
+    public SinglePlayer send(SinglePlayer payload) {
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Player game history Sent");
 //        System.out.println(payload);
