@@ -7,7 +7,6 @@ import java.util.Optional;
 
 public interface PlayerService {
 
-    SinglePlayer saveGameHistory(SinglePlayer singlePlayer);
 
 
 
